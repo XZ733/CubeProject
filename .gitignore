@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+/i2c_HardWare_oled/OLED_TEST/Debug/*
+/i2c_HardWare_oled/OLED_TEST/.settings/*
