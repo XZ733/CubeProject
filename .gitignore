@@ -54,3 +54,4 @@ dkms.conf
 
 /i2c_HardWare_oled/OLED_TEST/Debug/*
 /i2c_HardWare_oled/OLED_TEST/.settings/*
+/.metadata
