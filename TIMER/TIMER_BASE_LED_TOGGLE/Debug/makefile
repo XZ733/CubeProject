@@ -61,8 +61,8 @@ all: main-build
 main-build: TIMER_BASE_LED_TOGGLE.elf secondary-outputs
 
 # Tool invocations
-TIMER_BASE_LED_TOGGLE.elf: $(OBJS) $(USER_OBJS) F:\STM32CubeIDE\workspace_1.6.1\TIMER_BASE_LED_TOGGLE\STM32G474RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TIMER_BASE_LED_TOGGLE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\STM32CubeIDE\workspace_1.6.1\TIMER_BASE_LED_TOGGLE\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER_BASE_LED_TOGGLE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+TIMER_BASE_LED_TOGGLE.elf: $(OBJS) $(USER_OBJS) F:\Git\CubeProject\TIMER\TIMER_BASE_LED_TOGGLE\STM32G474RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "TIMER_BASE_LED_TOGGLE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\Git\CubeProject\TIMER\TIMER_BASE_LED_TOGGLE\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER_BASE_LED_TOGGLE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

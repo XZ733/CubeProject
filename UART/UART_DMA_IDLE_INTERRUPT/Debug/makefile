@@ -61,8 +61,8 @@ all: main-build
 main-build: UART_DMA_IDLE_INTERRUPT.elf secondary-outputs
 
 # Tool invocations
-UART_DMA_IDLE_INTERRUPT.elf: $(OBJS) $(USER_OBJS) F:\STM32CubeIDE\workspace_1.6.1\UART_DMA_IDLE_INTERRUPT\STM32G474RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "UART_DMA_IDLE_INTERRUPT.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\STM32CubeIDE\workspace_1.6.1\UART_DMA_IDLE_INTERRUPT\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_DMA_IDLE_INTERRUPT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+UART_DMA_IDLE_INTERRUPT.elf: $(OBJS) $(USER_OBJS) F:\Git\CubeProject\UART\UART_DMA_IDLE_INTERRUPT\STM32G474RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "UART_DMA_IDLE_INTERRUPT.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\Git\CubeProject\UART\UART_DMA_IDLE_INTERRUPT\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_DMA_IDLE_INTERRUPT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
