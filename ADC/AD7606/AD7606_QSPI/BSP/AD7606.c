@@ -13,7 +13,7 @@
  * @return  uint8_t			QSPI_OK:正常
  *                      QSPI_ERROR:错误
  */
-uint8_t QSPI_Send_CMD(uint32_t dataSize)
+uint8_t AD7606_Send_CMD(uint32_t dataSize)
 {
     QSPI_CommandTypeDef Cmdhandler;
 
@@ -47,13 +47,11 @@ uint8_t AD7606_ReadOnce(uint8_t *data,uint8_t size)
 {
 	uint8_t state;
 
-    if(QSPI_Send_CMD(size) == CMD_ERROR)
+    if(AD7606_Send_CMD(size) == CMD_ERROR)
     	return CMD_ERROR;
 
     state = HAL_QSPI_Receive(&hqspi1, data, 5000);
     return state;
-
-
 
 }
 
